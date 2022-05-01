@@ -8,7 +8,11 @@ export default function Controls({
   fillFlorest,
   fillRain,
   fillCoffeeShop,
-  fillFireplace
+  fillFireplace,
+  rangeFlorest,
+  rangeRain,
+  rangeCoffeeShop,
+  rangeFireplace
 }){
   function play(){
     buttonPlay.classList.add('hide')
@@ -34,6 +38,10 @@ export default function Controls({
     fillRain.classList.remove('selected')
     buttonFlorest.classList.remove('selected')
     fillFlorest.classList.remove('selected')
+    rangeFlorest.classList.remove('inputSelected')
+    rangeRain.classList.remove('inputSelected')
+    rangeCoffeeShop.classList.remove('inputSelected')
+    rangeFireplace.classList.remove('inputSelected')
   }
 
   

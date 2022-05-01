@@ -62,15 +62,15 @@ export default function Events({
 
  /* Pegando os valores de volume dos sons */
   rangeFlorest.addEventListener('click', () => {
-    sound.soundFlorest.volume = this.value
+    sound.soundFlorest.volume = rangeFlorest.value
   })
 
   rangeRain.addEventListener('click', () => {
-    sound.soundRain.volume = this.value
+    sound.soundRain.volume = rangeRain.value
   })
 
   rangeCoffeeShop.addEventListener('click', () => {
-    sound.soundCoffeeShop.volume = this.value
+    sound.soundCoffeeShop.volume = rangeCoffeeShop.value
   })
 
   rangeFireplace.addEventListener('click', () => {
@@ -83,24 +83,28 @@ export default function Events({
     rangeFlorest.value = 0.5
     bgColorFlorest.classList.add('selected')
     fillFlorest.classList.add('selected')
+    rangeFlorest.classList.add('inputSelected')
   }
 
   function clickedRain(){
     rangeRain.value = 0.5
     bgColorRain.classList.add('selected')
     fillRain.classList.add('selected')
+    rangeRain.classList.add('inputSelected')
   }
 
   function clickedCoffeeShop(){
     rangeCoffeeShop.value = 0.5
     bgColorCoffeeShop.classList.add('selected')
     fillCoffeeShop.classList.add('selected')
+    rangeCoffeeShop.classList.add('inputSelected')
   }
 
   function clickedFireplace(){
     rangeFireplace.value = 0.5
     bgColorFireplace.classList.add('selected')
     fillFireplace.classList.add('selected')
+    rangeFireplace.classList.add('inputSelected')
   }
 
   function playSoundFlorest(){
@@ -136,7 +140,6 @@ export default function Events({
       soundOn = true
       sound.pauseSounds()
       sound.soundCoffeeShop.play()
-      
     } else {
       soundOn = false
       sound.pauseSounds()
@@ -149,7 +152,6 @@ export default function Events({
       soundOn = true
       sound.pauseSounds()
       sound.soundFireplace.play()
-      
     } else {
       soundOn = false
       sound.pauseSounds()

@@ -17,7 +17,15 @@ import {
   fillFlorest,
   fillRain,
   fillCoffeeShop,
-  fillFireplace
+  fillFireplace,
+  rangeFlorest,
+  rangeRain,
+  rangeCoffeeShop,
+  rangeFireplace,
+  bgColorFlorest,
+  bgColorRain,
+  bgColorCoffeeShop,
+  bgColorFireplace
 } from "./elements.js";
 
 const controls = Controls({
@@ -33,7 +41,15 @@ const controls = Controls({
   fillFlorest,
   fillRain,
   fillCoffeeShop,
-  fillFireplace
+  fillFireplace,
+  rangeFlorest,
+  rangeRain,
+  rangeCoffeeShop,
+  rangeFireplace,
+  bgColorFlorest,
+  bgColorRain,
+  bgColorCoffeeShop,
+  bgColorFireplace
 })
 
 const sound = Sound()
