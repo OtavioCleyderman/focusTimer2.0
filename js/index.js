@@ -1,3 +1,5 @@
+Access-Control-Allow-Origin: *;
+  
 import Events from "./events.js";
 import Timer from "./timer.js"
 import Sound from "./sounds.js"
