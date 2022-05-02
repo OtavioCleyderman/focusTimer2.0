@@ -14,13 +14,17 @@ const bgColorCoffeeShop = document.querySelector('.coffee-shop')
 const bgColorFireplace = document.querySelector('.fireplace')
 const fillFlorest = document.querySelector('.fillFlorest')
 const fillRain = document.querySelector('.fillRain')
-const fillCoffeeShop = document.querySelector('.fillCoffee-shop')
+const fillCoffeeShop = document.querySelector('.fillCoffeeShop')
 const fillFireplace = document.querySelector('.fillFireplace')
 
 const rangeFlorest = document.querySelector('.rangeFlorest')
 const rangeRain = document.querySelector('.rangeRain')
 const rangeCoffeeShop = document.querySelector('.rangeCoffeeShop')
 const rangeFireplace = document.querySelector('.rangeFireplace')
+
+const html = document.querySelector("html")
+const buttonDay = document.querySelector('.day')
+const buttonNight = document.querySelector('.night')
 
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
@@ -50,5 +54,8 @@ export {
   bgColorFlorest,
   bgColorRain,
   bgColorCoffeeShop,
-  bgColorFireplace
+  bgColorFireplace,
+  buttonDay,
+  buttonNight,
+  html
 }

@@ -25,7 +25,10 @@ import {
   bgColorFlorest,
   bgColorRain,
   bgColorCoffeeShop,
-  bgColorFireplace
+  bgColorFireplace,
+  buttonDay,
+  buttonNight,
+  html
 } from "./elements.js";
 
 const controls = Controls({
@@ -49,7 +52,10 @@ const controls = Controls({
   bgColorFlorest,
   bgColorRain,
   bgColorCoffeeShop,
-  bgColorFireplace
+  bgColorFireplace,
+  buttonDay,
+  buttonNight,
+  html
 })
 
 const sound = Sound()

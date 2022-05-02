@@ -13,17 +13,37 @@
   --lh-standard: 14.8rem;
   --fw-standard: 500;
 
+  --bg: #FFFFFF;
   --bg-cards: #E1E1E6;
   --color-primary: #323238;
   --color-selected: #02799D;
-  --color-selected-light: #42D3FF;
+  --color-icons: #323238;
   --color-icon-selected: #FFFFFF;
 
+  --bg-dark: #121214;
+  --bg-cards-dark: #29292E;
+  --color-primary-dark: #FFFFFF;
+  --color-selected-dark: #02799D;
+  --color-icons-dark: #C4C4CC;
+  --color-icon-selected-dark: #FFFFFF;
+
+}
+
+html{
+  background: var(--bg);
 }
 
 body{
   font-family: var(--ff-standard);
   margin: 0 auto;
+}
+
+
+
+header{
+  display: flex;
+  justify-content: end;
+  padding: 3rem;
 }
 
 main{
@@ -32,7 +52,7 @@ main{
   align-items: center;
   justify-content: space-evenly;
 
-  height: 97vh;
+  height: 70vh;
 }
 
 .hide{
@@ -43,8 +63,6 @@ main{
   background: var(--color-selected);
   fill: var(--color-icon-selected)
 }
-
-
 
 
 
@@ -66,6 +84,8 @@ main{
 
   margin-bottom: 4.8rem;
 }
+
+
 
 button {
   border: none;
@@ -105,11 +125,27 @@ button {
   height: 15.2rem;
 }
 
+
 #sounds button{
   width: 13.8rem;
   height: 15.2rem;
   border-radius: 2.4rem;
 }
+
+.fillFlorest,
+.fillRain,
+.fillCoffeeShop,
+.fillFireplace{
+  fill: var(--color-icons)
+ }
+
+ .fillPlay,
+ .fillPause,
+ .fillStop,
+ .fillAdd,
+ .fillDecrease{
+   fill: var(--color-icons)
+ }
 
 .rangeFlorest,
 .rangeRain,
@@ -124,13 +160,15 @@ button {
   background: var(--color-primary);
 }
 
+
+
 input{
   -webkit-appearance: none;
   border-radius: 99.9rem;
   cursor: pointer;
 }
   
-input::-webkit-slider-runnable-track {
+.input::-webkit-slider-runnable-track {
   height: 0.5rem;
   cursor: pointer;
   background: var(--color-primary);
@@ -138,7 +176,7 @@ input::-webkit-slider-runnable-track {
     
 }
   
-input::-webkit-slider-thumb {
+.input::-webkit-slider-thumb {
   height: 1.6rem;
   width: 1.6rem;
   border-radius: 9rem;
@@ -147,6 +185,7 @@ input::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -5px;
 }
+
 
 .inputSelected::-webkit-slider-runnable-track{
   background: var(--color-icon-selected);
@@ -157,15 +196,19 @@ input::-webkit-slider-thumb {
 }
 
 
+
+
 footer{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-footer p{
+.footer{
   font-size: 1.6rem;
   color: var(--color-primary);
+  position: fixed;
+  bottom: 1rem;
 }
 
 footer a{
@@ -177,6 +220,7 @@ footer a{
   main{
     display: grid;
     grid-template-columns: 1fr;
+    gap: 4rem;
   }
 
   #sounds{
@@ -186,9 +230,13 @@ footer a{
     margin: 0 auto;
   }
 
-  footer p{
+  .footer{
     font-size: clamp(0.9rem, 0.5rem + 1vw, 1.6rem);
     color: var(--color-primary);
+    position: fixed;
+    bottom: 1rem;
   }
+
+
 
 }

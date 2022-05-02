@@ -21,7 +21,10 @@ import {
   bgColorFlorest,
   bgColorRain,
   bgColorCoffeeShop,
-  bgColorFireplace
+  bgColorFireplace,
+  buttonDay,
+  buttonNight,
+  html
 } from "./elements.js";
 
 let soundOn = false
@@ -74,7 +77,7 @@ export default function Events({
   })
 
   rangeFireplace.addEventListener('click', () => {
-    sound.soundFireplace.volume = this.value
+    sound.soundFireplace.volume = rangeFireplace.value
   })
 
   /* funções separadas para evitar o problema de ter que dar dois cliques para funcionar o botão */
@@ -183,7 +186,43 @@ export default function Events({
   })
 
 
+  /* Troca de tema */
 
+  const getStyle = (element, style) => window.getComputedStyle(element).getPropertyValue(style)
+
+  const initialColors = {
+    bg: getStyle(html,"--bg"),
+    bgCards: getStyle(html,"--bg-cards"),
+    colorIcons: getStyle(html,"--color-icons"),
+    colorPrimary: getStyle(html,"--color-primary")
+  }
+  const darkMode = {
+    bg: "#121214",
+    bgCards: "#29292E",
+    colorIcons: "#C4C4CC",
+    colorPrimary: "#FFFFFF"
+  }
+  
+
+const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+
+
+ const changeColors = (colors) => {
+  Object.keys(colors).map(key => html.style.setProperty(transformKey(key), colors[key]))
+}
+
+
+  buttonDay.addEventListener('click', () => {
+    buttonDay.classList.add('hide')
+    buttonNight.classList.remove('hide')
+    changeColors(darkMode)
+  })
+
+  buttonNight.addEventListener('click', () => {
+    buttonNight.classList.add('hide')
+    buttonDay.classList.remove('hide')
+    changeColors(initialColors)
+  })
 
 }
 
